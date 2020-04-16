@@ -36,11 +36,16 @@ export class AppComponent {
         str = "";
       }
     } else {
-      for (let i = 0; i < this.b; i++) {
+      if(this.a > this.b){
+        var temp = this.a;
+        this.a = this.b;
+        this.b = temp;
+      }
+      for (let i = 0; i < this.b + 1; i++) {
         for (let j = 0; j < this.b - i + 1; j++) {
           str += "*";
         }
-        if (i + 1 < this.a) {
+        if (i < this.a) {
           for (let j = 0; j < i + 1; j++) {
             str += "o";
           }
