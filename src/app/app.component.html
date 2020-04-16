@@ -1,4 +1,16 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+<label for="a">A: </label>
+<input [(ngModel)]="a" type="number" id="a">
+<br>
+<label for="b">B: </label>
+<input [(ngModel)]="b" type="number" id="b">
+<br>
+
+
+
+<button (click)="run()">run</button>
+<button (click)="reset()">Reset</button>
+
+
 </p>
