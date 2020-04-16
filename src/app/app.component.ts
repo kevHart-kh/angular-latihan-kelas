@@ -28,6 +28,11 @@ export class AppComponent {
     if (this.sum % 2 == 0) {
       //genap
       this.nama = "Pola B";
+      if(this.a<this.b){
+        var temp = this.a;
+        this.a = this.b;
+        this.b = temp;
+      }
       for (let i = this.a; i < this.sum; i++) {
         for (let j = 0; j < i + 1; j++) {
           str += "*";
@@ -36,6 +41,7 @@ export class AppComponent {
         str = "";
       }
     } else {
+      this.nama = "Pola A";
       if(this.a > this.b){
         var temp = this.a;
         this.a = this.b;
